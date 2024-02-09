@@ -65,7 +65,7 @@ export const ProductScreen = ({route}: Props) => {
 
 
           }}
-          rightActionIcon="camera-outline"
+          rightActionIcon="image-outline"
         >
           <ScrollView style={{flex: 1}}>
             {/* Imágenes de el producto */}
@@ -181,6 +181,7 @@ export const ProductScreen = ({route}: Props) => {
               style={{margin: 15}}>
               Guardar
             </Button>
+
 
             <Layout style={{height: 200}} />
           </ScrollView>
