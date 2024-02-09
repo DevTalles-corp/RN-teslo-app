@@ -21,6 +21,7 @@ import {MyIcon} from '../../components/ui/MyIcon';
 
 import {ProductImages} from '../../components/products/ProductImages';
 import {genders, sizes} from '../../../config/constants/constants';
+import { CameraAdapter } from '../../../config/adapters/camera-adapter';
 
 interface Props extends StackScreenProps<RootStackParams, 'ProductScreen'> {}
 
@@ -56,7 +57,14 @@ export const ProductScreen = ({route}: Props) => {
         <MainLayout 
           title={values.title} 
           subTitle={`Precio: ${values.price}`}
-          rightAction={() => console.log('hola mundo')}
+          rightAction={ async() => {
+
+            const photos = await CameraAdapter.getPicturesFromLibrary();
+            setFieldValue('images', [...values.images, ...photos])
+
+
+
+          }}
           rightActionIcon="camera-outline"
         >
           <ScrollView style={{flex: 1}}>
