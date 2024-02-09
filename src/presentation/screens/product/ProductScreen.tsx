@@ -11,7 +11,7 @@ import {useMutation, useQuery, useQueryClient} from '@tanstack/react-query';
 import {StackScreenProps} from '@react-navigation/stack';
 import {RootStackParams} from '../../navigation/StackNavigator';
 import {getProductById} from '../../../actions/products/get-product-by-id';
-import {useRef} from 'react';
+import {useEffect, useRef} from 'react';
 import {ScrollView} from 'react-native-gesture-handler';
 import {FlatList} from 'react-native';
 import {FadeInImage} from '../../components/ui/FadeInImage';
@@ -46,6 +46,8 @@ export const ProductScreen = ({route}: Props) => {
 
     },
   })
+
+
 
 
 
